@@ -1,0 +1,87 @@
+name: trip_task
+description: "Senior Flutter Engineer interview task – responsive web UI for trips list using Clean Architecture, Bloc state management, and Freezed models."
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+ # State Management + Architecture
+  flutter_bloc: ^9.1.1
+  bloc: ^9.0.0
+  equatable: ^2.0.7
+  get_it: ^8.0.3
+  injectable: ^2.5.0
+
+  # Model Generation
+  freezed: ^3.0.6
+  freezed_annotation: ^3.0.0
+  json_serializable: ^6.9.5
+  json_annotation: ^4.9.0
+
+  # UI + Responsiveness
+  responsive_s:
+    path: packages/responsive_s
+  flutter_svg: ^2.1.0
+  auto_size_text: ^3.0.0
+
+  # Localization + Assets (if you want consistent structure)
+  easy_localization: ^3.0.7+1
+  flutter_gen_core: ^5.10.0
+  go_router: ^15.1.2
+
+
+  # Utilities
+  logger: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+  build_runner: ^2.4.15
+  flutter_gen_runner: ^5.10.0
+  injectable_generator: ^2.7.0
+
+# Flutter gen configuration.
+flutter_gen:
+  output: lib/core/managers/assets_managers
+
+  integrations:
+    flutter_svg: true
+    lottie: true
+    rive: true
+  assets:
+    outputs:
+      class_name: AssetsManager
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/mock_data/trips_mock.json
+    - assets/icons/
+    - assets/images/
+   #Translation file :
+    - assets/translation/
+
+
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/inter/Inter-Regular.ttf
+        - asset: assets/fonts/inter/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/inter/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/inter/Inter-Bold.ttf
+          weight: 700
+
+
