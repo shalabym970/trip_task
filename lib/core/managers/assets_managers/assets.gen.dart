@@ -15,8 +15,8 @@ import 'package:vector_graphics/vector_graphics.dart' as _vg;
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
-  /// File path: assets/icons/Icons.svg
-  SvgGenImage get icons => const SvgGenImage('assets/icons/Icons.svg');
+  /// File path: assets/icons/bell.svg
+  SvgGenImage get bell => const SvgGenImage('assets/icons/bell.svg');
 
   /// File path: assets/icons/chevron-down.svg
   SvgGenImage get chevronDown =>
@@ -29,19 +29,19 @@ class $AssetsIconsGen {
   /// File path: assets/icons/plus.svg
   SvgGenImage get plus => const SvgGenImage('assets/icons/plus.svg');
 
-  /// File path: assets/icons/setting-2.svg
-  SvgGenImage get setting2 => const SvgGenImage('assets/icons/setting-2.svg');
+  /// File path: assets/icons/setting.svg
+  SvgGenImage get setting => const SvgGenImage('assets/icons/setting.svg');
 
   /// File path: assets/icons/sliders.svg
   SvgGenImage get sliders => const SvgGenImage('assets/icons/sliders.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [
-    icons,
+    bell,
     chevronDown,
     moreHorizontal,
     plus,
-    setting2,
+    setting,
     sliders,
   ];
 }
@@ -49,11 +49,18 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/Header.svg
-  SvgGenImage get header => const SvgGenImage('assets/images/Header.svg');
+  /// File path: assets/images/john.svg
+  SvgGenImage get john => const SvgGenImage('assets/images/john.svg');
+
+  /// File path: assets/images/john_png.png
+  AssetGenImage get johnPng =>
+      const AssetGenImage('assets/images/john_png.png');
+
+  /// File path: assets/images/logo.svg
+  SvgGenImage get logo => const SvgGenImage('assets/images/logo.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values => [header];
+  List<dynamic> get values => [john, johnPng, logo];
 }
 
 class $AssetsMockDataGen {
@@ -70,10 +77,10 @@ class $AssetsTranslationGen {
   const $AssetsTranslationGen();
 
   /// File path: assets/translation/en.json
-  String get english => 'assets/translation/en.json';
+  String get en => 'assets/translation/en.json';
 
   /// List of all assets
-  List<String> get values => [english];
+  List<String> get values => [en];
 }
 
 class AssetsManager {
@@ -83,6 +90,76 @@ class AssetsManager {
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsMockDataGen mockData = $AssetsMockDataGen();
   static const $AssetsTranslationGen translation = $AssetsTranslationGen();
+}
+
+class AssetGenImage {
+  const AssetGenImage(this._assetName, {this.size, this.flavors = const {}});
+
+  final String _assetName;
+
+  final Size? size;
+  final Set<String> flavors;
+
+  Image image({
+    Key? key,
+    AssetBundle? bundle,
+    ImageFrameBuilder? frameBuilder,
+    ImageErrorWidgetBuilder? errorBuilder,
+    String? semanticLabel,
+    bool excludeFromSemantics = false,
+    double? scale,
+    double? width,
+    double? height,
+    Color? color,
+    Animation<double>? opacity,
+    BlendMode? colorBlendMode,
+    BoxFit? fit,
+    AlignmentGeometry alignment = Alignment.center,
+    ImageRepeat repeat = ImageRepeat.noRepeat,
+    Rect? centerSlice,
+    bool matchTextDirection = false,
+    bool gaplessPlayback = true,
+    bool isAntiAlias = false,
+    String? package,
+    FilterQuality filterQuality = FilterQuality.medium,
+    int? cacheWidth,
+    int? cacheHeight,
+  }) {
+    return Image.asset(
+      _assetName,
+      key: key,
+      bundle: bundle,
+      frameBuilder: frameBuilder,
+      errorBuilder: errorBuilder,
+      semanticLabel: semanticLabel,
+      excludeFromSemantics: excludeFromSemantics,
+      scale: scale,
+      width: width,
+      height: height,
+      color: color,
+      opacity: opacity,
+      colorBlendMode: colorBlendMode,
+      fit: fit,
+      alignment: alignment,
+      repeat: repeat,
+      centerSlice: centerSlice,
+      matchTextDirection: matchTextDirection,
+      gaplessPlayback: gaplessPlayback,
+      isAntiAlias: isAntiAlias,
+      package: package,
+      filterQuality: filterQuality,
+      cacheWidth: cacheWidth,
+      cacheHeight: cacheHeight,
+    );
+  }
+
+  ImageProvider provider({AssetBundle? bundle, String? package}) {
+    return AssetImage(_assetName, bundle: bundle, package: package);
+  }
+
+  String get path => _assetName;
+
+  String get keyName => _assetName;
 }
 
 class SvgGenImage {

@@ -1,7 +1,7 @@
 import 'dart:ui';
 
 class LocalizationConfig {
-  static List<String> supportedLanguages = ['en', 'ar'];
+  static List<String> supportedLanguages = ['en'];
   static  List<Locale> supportedLocales =
       supportedLanguages.map((lang) => Locale(lang)).toList();
 

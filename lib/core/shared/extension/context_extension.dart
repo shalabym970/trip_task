@@ -61,4 +61,5 @@ extension ContextExtension on BuildContext {
   Color get heading => dynamicColors.heading;
   Color get subText => dynamicColors.subText;
   Color get link => dynamicColors.link;
+  Color get textMain => dynamicColors.textMain;
 }

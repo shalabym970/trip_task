@@ -24,7 +24,7 @@ class ThemeManager {
         elevation: 0,
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
-      scaffoldBackgroundColor: colors.background,
+      scaffoldBackgroundColor: colors.black,
       colorScheme: ColorScheme(
         brightness: Brightness.dark,
         primary: colors.black,

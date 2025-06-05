@@ -5,12 +5,11 @@ import '../text_theme/font_family.dart';
 import '../theme_manager.dart';
 
 class CustomTextTheme {
-  CustomTextTheme({required this.sizer, required this.locale}) {
+  CustomTextTheme({required this.sizer}) {
     FontFamily.switchToEnglishFont();
   }
 
   final Sizer sizer;
-  final Locale locale;
 
   TextStyle largeTitle() => TextStyle(
     fontFamily: FontFamily.interFamily,

@@ -1,3 +1,9 @@
 {
-
+  "tabletSupportPhrase":"Tablet & Mobile version will be coming soon please access from your laptop or desktop",
+  "comingSoon": "Coming soon",
+  "items": "Items",
+  "pricing": "Pricing",
+  "info": "Info",
+  "tasks": "Tasks",
+  "analytics": "Analytics"
 }

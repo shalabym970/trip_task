@@ -9,7 +9,7 @@ final routerConfig = GoRouter(
   routes: [
     GoRoute(
       path: AppRoutes.home,
-      builder: (context, state) => const HomeView(title: 'Home',),
+      builder: (context, state) => const HomeView(),
     ),
   ],
   redirect: (context, state) {
