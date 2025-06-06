@@ -6,7 +6,7 @@ class FontManager {
 
   static TextStyle tiny = TextStyle(
     fontFamily: FontFamily.interFamily,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontSize: FontSize.tiny,
   );
 
@@ -15,7 +15,11 @@ class FontManager {
     fontWeight: FontWeight.w500,
     fontSize: FontSize.title,
   );
-
+  static TextStyle interBigTitle = TextStyle(
+    fontFamily: FontFamily.interFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: FontSize.bigTitle,
+  );
   static TextStyle interBodyMedium = TextStyle(
     fontFamily: FontFamily.interFamily,
     fontWeight: FontWeight.w400,
@@ -37,10 +41,20 @@ class FontManager {
     fontWeight: FontWeight.w500,
     fontSize: FontSize.largeLabel,
   );
-  static TextStyle interTiny = TextStyle(
+  static TextStyle interLargeLabel400 = TextStyle(
     fontFamily: FontFamily.interFamily,
     fontWeight: FontWeight.w400,
-    fontSize: FontSize.tiny,
+    fontSize: FontSize.largeLabel,
+  );
+  static TextStyle interTinyBody = TextStyle(
+    fontFamily: FontFamily.interFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: FontSize.tinyBody,
+  );
+  static TextStyle interRegularTitle = TextStyle(
+    fontFamily: FontFamily.interFamily,
+    fontWeight: FontWeight.w400,
+    fontSize: FontSize.regularTitle,
   );
 }
 
@@ -81,7 +95,6 @@ class FontSize {
   static double tiny = 10;
 
   static double inputTextField = 13;
-  static double smaleTitleHight = 1.5;
   final ScreenType platformType;
 
   static void _assignMobileValues() {

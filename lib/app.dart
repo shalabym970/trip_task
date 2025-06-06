@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -27,17 +29,22 @@ class App extends StatelessWidget {
         ),
         child: ResponsiveWidget(
           builder: (sizer) {
+            final screenSize = window.physicalSize / window.devicePixelRatio;
+
+            final isDesktopLike = screenSize.width >= AppFrameConstant.desktop.width;
+            final isMobileLike = screenSize.width <= AppFrameConstant.mobile.width;
+
+
             return MultiBlocProvider(
               providers: [BlocProvider(create: (context) => getIt<HomeBloc>())],
               child: Builder(
                 builder: (context) {
-                  if (!sizer.isDesktop && !sizer.isMobile) {
+                  if (!isDesktopLike && !isMobileLike) {
                     return NotSuitableScreenDialog(sizer: sizer);
                   }
                   return GlobalLoaderOverlay(
                     useDefaultLoading: false,
                     overlayWidgetBuilder: (_) {
-                      //ignored progress for the moment
                       return Center(
                         child: CircularProgressIndicator(
                           color: DynamicColors.colors.warning,
@@ -65,3 +72,5 @@ class App extends StatelessWidget {
     );
   }
 }
+
+//&& !sizer.isMobile

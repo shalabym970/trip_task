@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-class Appcontext {
+class AppContext {
   final BuildContext context;
-  Appcontext.of(this.context);
+  AppContext.of(this.context);
 }

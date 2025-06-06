@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_s/responsive_s.dart';
 import 'package:trip_task/core/managers/assets_managers/assets.gen.dart';
@@ -10,6 +11,7 @@ import 'package:trip_task/core/shared/common_widgets/spacer_widgets/spaceing.dar
 import 'package:trip_task/core/shared/common_widgets/trips_logo.dart';
 import 'package:trip_task/core/shared/common_widgets/vertical_divider_line.dart';
 import 'package:trip_task/core/shared/extension/context_extension.dart';
+import 'package:trip_task/features/home/presentation/managers/home_bloc.dart';
 import 'package:trip_task/generated/keys.g.dart';
 
 class DesktopHomeHeaderWidget extends StatefulWidget {
@@ -28,6 +30,14 @@ class DesktopHomeHeaderWidget extends StatefulWidget {
 }
 
 class _DesktopHomeHeaderWidgetState extends State<DesktopHomeHeaderWidget> {
+
+  @override
+  void initState() {
+    context.read<HomeBloc>().add(const HomeEvent.started());
+    super.initState();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -105,9 +115,7 @@ class _DesktopHomeHeaderWidgetState extends State<DesktopHomeHeaderWidget> {
               DynamicSpacing.of(widget.sizer).semiLargeHorizontalSpace(),
               Text(
                 "John Doe",
-                style: FontManager.interbodySmall.copyWith(
-                  color: context.white,
-                ),
+                style: FontManager.interbodySmall
               ),
               DynamicSpacing.of(widget.sizer).smallHorizontalSpace(),
               SvgPicture.asset(

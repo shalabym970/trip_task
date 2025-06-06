@@ -22,7 +22,6 @@ class TripsLogo extends StatelessWidget {
         AssetsManager.images.logo.path,
         width: logoWidth ?? sizer.w(200),
         height: logoHeight ?? sizer.h(37),
-        fit: BoxFit.contain,
       );
     });
   }

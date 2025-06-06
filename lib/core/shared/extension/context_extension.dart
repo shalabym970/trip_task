@@ -52,6 +52,7 @@ extension ContextExtension on BuildContext {
   Color get info => dynamicColors.info;
   Color get white => dynamicColors.white;
   Color get black => dynamicColors.black;
+  Color get black60 => dynamicColors.black60;
   Color get gray => dynamicColors.gray;
   Color get grayDark => dynamicColors.grayDark;
   Color get grayBorder => dynamicColors.grayBorder;

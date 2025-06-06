@@ -14,15 +14,16 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
  # State Management + Architecture
-  flutter_bloc: ^9.1.1
-  bloc: ^9.0.0
+  flutter_bloc: ^8.1.6
+  bloc: ^8.1.1
   equatable: ^2.0.7
   get_it: ^8.0.3
   injectable: ^2.5.0
+  dartz: ^0.10.1
 
   # Model Generation
-  freezed: ^3.0.6
-  freezed_annotation: ^3.0.0
+
+  freezed_annotation: ^2.4.1
   json_serializable: ^6.9.5
   json_annotation: ^4.9.0
 
@@ -31,6 +32,8 @@ dependencies:
     path: packages/responsive_s
   flutter_svg: ^2.1.0
   auto_size_text: ^3.0.0
+  window_manager: ^0.3.5
+
 
   # Localization + Assets (if you want consistent structure)
   easy_localization: ^3.0.7+1
@@ -49,6 +52,7 @@ dev_dependencies:
 
   flutter_lints: ^6.0.0
   build_runner: ^2.4.15
+  freezed: ^2.5.2
   flutter_gen_runner: ^5.10.0
   injectable_generator: ^2.7.0
 

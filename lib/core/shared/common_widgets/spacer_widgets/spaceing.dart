@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trip_task/core/shared/model/sizer_model.dart';
+import 'package:trip_task/core/shared/models/sizer_model.dart';
 
 import '../../../managers/theme_manager/color_manager/dynamic_colors.dart';
 
@@ -33,9 +33,12 @@ class DynamicSpacing extends AppSizer {
   // Dynamic vertical spacing
   SizedBox smallVerticalSpace() => SizedBox(height: sizer.h(4.0));
 
+  SizedBox midSmallVerticalSpace() => SizedBox(width: sizer.h(6.0));
+
   SizedBox mediumVerticalSpace() => SizedBox(height: sizer.h(8.0));
 
   SizedBox semiLargeVerticalSpace() => SizedBox(height: sizer.h(12.0));
+  SizedBox midLargeVerticalSpace() => SizedBox(height: sizer.h(16.0));
 
   SizedBox largeVerticalSpace() => SizedBox(height: sizer.h(18.0));
 
@@ -50,11 +53,15 @@ class DynamicSpacing extends AppSizer {
   // Dynamic horizontal spacing
   SizedBox smallHorizontalSpace() => SizedBox(width: sizer.w(4.0));
 
+  SizedBox midSmallHorizontalSpace() => SizedBox(width: sizer.w(6.0));
+
   SizedBox mediumHorizontalSpace() => SizedBox(width: sizer.w(8.0));
 
   SizedBox semiLargeHorizontalSpace() => SizedBox(width: sizer.w(12.0));
 
-  SizedBox largeHorizontalSpace() => SizedBox(width: sizer.w(16.0));
+  SizedBox midLargeHorizontalSpace() => SizedBox(width: sizer.w(16.0));
+
+  SizedBox largeHorizontalSpace() => SizedBox(width: sizer.w(14.0));
 
   SizedBox extraLargeHorizontalSpace() => SizedBox(width: sizer.w(24.0));
 

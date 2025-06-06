@@ -21,7 +21,10 @@ class CodegenLoader extends AssetLoader{
   "pricing": "Pricing",
   "info": "Info",
   "tasks": "Tasks",
-  "analytics": "Analytics"
+  "analytics": "Analytics",
+  "addNewItem": "Add a New Item",
+  "unfinishedTasks": "unfinished tasks",
+  "unknownError": "An unknown error occurred. Please try again."
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": _en};
 }

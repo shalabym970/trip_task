@@ -18,9 +18,15 @@ class $AssetsIconsGen {
   /// File path: assets/icons/bell.svg
   SvgGenImage get bell => const SvgGenImage('assets/icons/bell.svg');
 
+  /// File path: assets/icons/calendar.svg
+  SvgGenImage get calendar => const SvgGenImage('assets/icons/calendar.svg');
+
   /// File path: assets/icons/chevron-down.svg
   SvgGenImage get chevronDown =>
       const SvgGenImage('assets/icons/chevron-down.svg');
+
+  /// File path: assets/icons/menu.svg
+  SvgGenImage get menu => const SvgGenImage('assets/icons/menu.svg');
 
   /// File path: assets/icons/more-Horizontal.svg
   SvgGenImage get moreHorizontal =>
@@ -38,7 +44,9 @@ class $AssetsIconsGen {
   /// List of all assets
   List<SvgGenImage> get values => [
     bell,
+    calendar,
     chevronDown,
+    menu,
     moreHorizontal,
     plus,
     setting,
@@ -49,9 +57,6 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/john.svg
-  SvgGenImage get john => const SvgGenImage('assets/images/john.svg');
-
   /// File path: assets/images/john_png.png
   AssetGenImage get johnPng =>
       const AssetGenImage('assets/images/john_png.png');
@@ -59,8 +64,14 @@ class $AssetsImagesGen {
   /// File path: assets/images/logo.svg
   SvgGenImage get logo => const SvgGenImage('assets/images/logo.svg');
 
+  /// File path: assets/images/natural.png
+  AssetGenImage get natural => const AssetGenImage('assets/images/natural.png');
+
+  /// File path: assets/images/user1.png
+  AssetGenImage get user1 => const AssetGenImage('assets/images/user1.png');
+
   /// List of all assets
-  List<dynamic> get values => [john, johnPng, logo];
+  List<dynamic> get values => [johnPng, logo, natural, user1];
 }
 
 class $AssetsMockDataGen {

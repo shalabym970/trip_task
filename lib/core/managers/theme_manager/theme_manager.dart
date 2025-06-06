@@ -43,17 +43,18 @@ class ThemeManager {
     );
   }
 
-  static TextTheme getTextTheme(CustomTextTheme customTheme, DynamicColors colors) =>
-      TextTheme(
-        bodyLarge: customTheme.bodyLarge().copyWith(color: colors.textMain),
-        bodyMedium: customTheme.bodyMedium().copyWith(color: colors.textMain),
-        bodySmall: customTheme.bodySmall().copyWith(color: colors.subText),
-        labelSmall: customTheme.smallLabel().copyWith(color: colors.subText),
-        labelMedium: customTheme.labelMedium().copyWith(color: colors.subText),
-        labelLarge: customTheme.labelLarge().copyWith(color: colors.link),
-        titleSmall: customTheme.smallTitle().copyWith(color: colors.heading),
-        titleMedium: customTheme.mediumTitle().copyWith(color: colors.heading),
-        titleLarge: customTheme.largeTitle().copyWith(color: colors.heading),
-        headlineMedium: customTheme.bigTitle().copyWith(color: colors.heading),
-      );
+  static TextTheme getTextTheme(
+    CustomTextTheme customTheme,
+    DynamicColors colors,
+  ) => TextTheme(
+    bodyLarge: customTheme.bodyLarge().copyWith(color: colors.white),
+    bodyMedium: customTheme.bodyMedium().copyWith(color: colors.white),
+    bodySmall: customTheme.bodySmall().copyWith(color: colors.white),
+    labelSmall: customTheme.smallLabel().copyWith(color: colors.white),
+    labelMedium: customTheme.labelMedium().copyWith(color: colors.white),
+    labelLarge: customTheme.labelLarge().copyWith(color: colors.white),
+    titleMedium: customTheme.mediumTitle().copyWith(color: colors.white),
+    titleLarge: customTheme.largeTitle().copyWith(color: colors.white),
+    headlineMedium: customTheme.bigTitle().copyWith(color: colors.white),
+  );
 }

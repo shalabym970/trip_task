@@ -41,12 +41,7 @@ class CustomTextTheme {
     fontSize: sizer.fontSize(FontSize.mediumTitle),
   );
 
-  TextStyle smallTitle() => TextStyle(
-    fontFamily: FontFamily.interFamily,
-    fontWeight: FontWeight.w700,
-    height: FontSize.smaleTitleHight,
-    fontSize: sizer.fontSize(FontSize.smallTitle),
-  );
+
 
   TextStyle tinyTitle() => TextStyle(
     fontFamily: FontFamily.interFamily,

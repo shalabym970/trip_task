@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_s/responsive_s.dart';
 import 'package:trip_task/core/shared/common_widgets/spacer_widgets/spaceing.dart';
 import 'package:trip_task/features/home/presentation/widgets/desktop/desktop_home_header_widget.dart';
-
+import 'package:trip_task/features/home/presentation/widgets/desktop/desktop_items_tab_view.dart';
 
 class DesktopHomeView extends StatefulWidget {
   const DesktopHomeView({super.key});
@@ -39,12 +39,7 @@ class _DesktopHomeViewState extends State<DesktopHomeView>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Center(
-                      child: Text(
-                        "Items",
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
+                    DesktopItemsTabView(sizer: sizer),
                     SizedBox.shrink(),
                     SizedBox.shrink(),
                     SizedBox.shrink(),

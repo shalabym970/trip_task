@@ -10,5 +10,8 @@ abstract class  LocaleKeys {
   static const info = 'info';
   static const tasks = 'tasks';
   static const analytics = 'analytics';
+  static const addNewItem = 'addNewItem';
+  static const unfinishedTasks = 'unfinishedTasks';
+  static const unknownError = 'unknownError';
 
 }

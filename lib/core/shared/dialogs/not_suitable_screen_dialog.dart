@@ -22,7 +22,7 @@ class NotSuitableScreenDialog extends StatelessWidget {
       locale: context.locale,
       home: Builder(builder: (context) {
         return Scaffold(
-          backgroundColor: DynamicColors.colors.background,
+          backgroundColor: DynamicColors.colors.white,
           body: Center(
             child: Card(
               child: Container(
@@ -30,7 +30,7 @@ class NotSuitableScreenDialog extends StatelessWidget {
                 width: sizer.width / 2.5,
                 padding: EdgeInsets.all(sizer.w(10)),
                 decoration: BoxDecoration(
-                    color: context.white,
+                    color: context.background,
                     borderRadius: BorderRadius.circular(sizer.radius(4))),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,6 +40,7 @@ class NotSuitableScreenDialog extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
                             fontWeight: FontWeight.w600,
                             fontSize: sizer.fontSize(14),
+                        color: context.white
                           ), sizer: sizer,
                     ),
                     DynamicSpacing.of(sizer).largeSpace(),
@@ -51,11 +52,14 @@ class NotSuitableScreenDialog extends StatelessWidget {
                             logoHeight: sizer.height / 5,
                             logoWidth: sizer.width / 6,
                           ),
+                          DynamicDivider.of(sizer).greyDivider05(),
                           Text(
                             LocaleKeys.tabletSupportPhrase.tr(),
                             style: context.bodyMedium?.copyWith(
                               fontWeight: FontWeight.w600,
                               fontSize: sizer.fontSize(12),
+                                color: context.white
+
                             ),
                             textAlign: TextAlign.center,
                           ),
