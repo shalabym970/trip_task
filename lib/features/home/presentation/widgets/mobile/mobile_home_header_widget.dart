@@ -1,18 +1,13 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_s/responsive_s.dart';
 import 'package:trip_task/core/managers/assets_managers/assets.gen.dart';
-import 'package:trip_task/core/managers/theme_manager/color_manager/dynamic_colors.dart';
-import 'package:trip_task/core/managers/theme_manager/theme_manager.dart';
 import 'package:trip_task/core/shared/common_widgets/spacer_widgets/spaceing.dart';
 import 'package:trip_task/core/shared/common_widgets/trips_logo.dart';
 import 'package:trip_task/core/shared/common_widgets/vertical_divider_line.dart';
-import 'package:trip_task/core/shared/extension/context_extension.dart';
 import 'package:trip_task/features/home/presentation/managers/home_bloc.dart';
-import 'package:trip_task/generated/keys.g.dart';
 
 class MobileHomeHeaderWidget extends StatefulWidget {
   const MobileHomeHeaderWidget({super.key, required this.sizer});

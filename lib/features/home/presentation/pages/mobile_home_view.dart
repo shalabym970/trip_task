@@ -4,6 +4,7 @@ import 'package:trip_task/core/shared/common_widgets/spacer_widgets/spaceing.dar
 import 'package:trip_task/features/home/presentation/widgets/mobile/mobile_home_header_widget.dart';
 import 'package:trip_task/features/home/presentation/widgets/mobile/mobile_items_tab_view.dart';
 
+
 class MobileHomeView extends StatelessWidget {
   const MobileHomeView({super.key});
 

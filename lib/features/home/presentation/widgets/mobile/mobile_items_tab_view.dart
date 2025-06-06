@@ -17,43 +17,45 @@ class MobileItemsTabView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: sizer.paddingSymmetric(horizontal: 13),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          DynamicSpacing.of(sizer).extraLargeVerticalSpace(),
-          Padding(
-            padding: sizer.paddingSymmetric(horizontal: 7),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  LocaleKeys.items.tr(),
-                  style: FontManager.interRegularTitle,
-                ),
-                Container(
-                  height: sizer.h(40),
-                  width: sizer.w(40),
-                  decoration: BoxDecoration(
-                    color: context.background,
-                    shape: BoxShape.circle,
+    return Expanded(
+      child: Padding(
+        padding: sizer.paddingSymmetric(horizontal: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            DynamicSpacing.of(sizer).extraLargeVerticalSpace(),
+            Padding(
+              padding: sizer.paddingSymmetric(horizontal: 7),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    LocaleKeys.items.tr(),
+                    style: FontManager.interRegularTitle,
                   ),
-                  child: Center(
-                    child: SvgPicture.asset(
-                      AssetsManager.icons.sliders.path,
-                      width: sizer.h(20),
-                      height: sizer.h(20),
-                      fit: BoxFit.contain,
+                  Container(
+                    height: sizer.h(40),
+                    width: sizer.w(40),
+                    decoration: BoxDecoration(
+                      color: context.background,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: SvgPicture.asset(
+                        AssetsManager.icons.sliders.path,
+                        width: sizer.h(20),
+                        height: sizer.h(20),
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          DynamicSpacing.of(sizer).extraLargeVerticalSpace(),
-          ItemsListView(sizer: sizer),
-        ],
+            DynamicSpacing.of(sizer).extraLargeVerticalSpace(),
+            ItemsListView(sizer: sizer),
+          ],
+        ),
       ),
     );
   }
