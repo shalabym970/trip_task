@@ -23,51 +23,53 @@ class NotSuitableScreenDialog extends StatelessWidget {
       home: Builder(builder: (context) {
         return Scaffold(
           backgroundColor: DynamicColors.colors.white,
-          body: Center(
-            child: Card(
-              child: Container(
-                height: sizer.height / 2,
-                width: sizer.width / 2.5,
-                padding: EdgeInsets.all(sizer.w(10)),
-                decoration: BoxDecoration(
-                    color: context.background,
-                    borderRadius: BorderRadius.circular(sizer.radius(4))),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    DialogTitle(
-                      title: LocaleKeys.comingSoon.tr(),
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            fontWeight: FontWeight.w600,
-                            fontSize: sizer.fontSize(14),
-                        color: context.white
-                          ), sizer: sizer,
-                    ),
-                    DynamicSpacing.of(sizer).largeSpace(),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          TripsLogo(
-                            logoHeight: sizer.height / 5,
-                            logoWidth: sizer.width / 6,
-                          ),
-                          DynamicDivider.of(sizer).greyDivider05(),
-                          Text(
-                            LocaleKeys.tabletSupportPhrase.tr(),
-                            style: context.bodyMedium?.copyWith(
+          body: SingleChildScrollView(
+            child: Center(
+              child: Card(
+                child: Container(
+                  height: sizer.height / 2,
+                  width: sizer.width / 2.5,
+                  padding: EdgeInsets.all(sizer.w(10)),
+                  decoration: BoxDecoration(
+                      color: context.background,
+                      borderRadius: BorderRadius.circular(sizer.radius(4))),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      DialogTitle(
+                        title: LocaleKeys.comingSoon.tr(),
+                        style: Theme.of(context).textTheme.titleMedium?.copyWith(
                               fontWeight: FontWeight.w600,
-                              fontSize: sizer.fontSize(12),
-                                color: context.white
-
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ],
+                              fontSize: sizer.fontSize(14),
+                          color: context.white
+                            ), sizer: sizer,
                       ),
-                    ),
-                    DynamicSpacing.of(sizer).largeSpace(),
-                  ],
+                      DynamicSpacing.of(sizer).largeSpace(),
+                      Expanded(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            TripsLogo(
+                              logoHeight: sizer.height / 5,
+                              logoWidth: sizer.width / 6,
+                            ),
+                            DynamicDivider.of(sizer).greyDivider05(),
+                            Text(
+                              LocaleKeys.tabletSupportPhrase.tr(),
+                              style: context.bodyMedium?.copyWith(
+                                fontWeight: FontWeight.w600,
+                                fontSize: sizer.fontSize(12),
+                                  color: context.white
+            
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      ),
+                      DynamicSpacing.of(sizer).largeSpace(),
+                    ],
+                  ),
                 ),
               ),
             ),
